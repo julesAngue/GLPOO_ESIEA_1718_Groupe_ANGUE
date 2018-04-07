@@ -10,7 +10,7 @@ public interface dessin {
 	
 	public double getTaille();
 	
-	public List getForme();
+	public FormeDessin getForme();
 	
 	public List getCouleur();
 	
