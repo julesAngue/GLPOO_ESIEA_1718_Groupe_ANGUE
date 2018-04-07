@@ -15,6 +15,7 @@ public interface dessin {
 	public List getCouleur();
 	
 	public double getRotation();
+
 	
 	
 }

@@ -36,9 +36,9 @@ public class CsvDessinDao implements DessinDao {
 				continue;
 			}
 			final dessin dessin = transform(ligne);
-			dessin.add(dessin);
+			dessins.add(dessin);
 		}
-		return dessin;
+		return dessins;
 	}
 
 	private dessin transform(final String ligne) {
