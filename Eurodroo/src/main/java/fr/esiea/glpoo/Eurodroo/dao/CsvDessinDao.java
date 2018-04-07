@@ -21,11 +21,11 @@ public class CsvDessinDao implements DessinDao {
 	}
 
 	public List<dessin> findAllDessin() {
-		final List<dessin> dessin = new ArrayList<>();
+		final List<dessin> dessins = new ArrayList<>();
 		boolean first = true;
 		// fichier > ligne
 		final List<String> lignes = lecture();
-		// ligne > oiseau
+		// ligne > dessin
 		for (final String ligne : lignes) {
 			if (ligne.trim().isEmpty() || ligne.startsWith("#")) {
 				continue;
@@ -36,12 +36,12 @@ public class CsvDessinDao implements DessinDao {
 				continue;
 			}
 			final dessin dessin = transform(ligne);
-			oiseaux.add(dessin);
+			dessin.add(dessin);
 		}
 		return dessin;
 	}
 
-	private forme transform(final String ligne) {
+	private dessin transform(final String ligne) {
 		final SimpleDessin dessin = new SimpleDessin();
 		
 		//remplir les champs a partir de la ligne
