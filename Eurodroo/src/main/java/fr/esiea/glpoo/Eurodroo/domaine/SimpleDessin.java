@@ -81,4 +81,14 @@ public class SimpleDessin implements dessin{
 		this.couleurs = couleurs;
 	}
 
+	public List getCouleur() {
+		List<String> couleurList = new ArrayList<String>();
+		for (String couleur : couleurs) {
+			couleurList.add(couleur);
+		}
+		return couleurList;
+	}
+
+
+
 }
