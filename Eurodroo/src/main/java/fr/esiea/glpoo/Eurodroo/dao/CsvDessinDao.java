@@ -21,7 +21,7 @@ public class CsvDessinDao implements DessinDao {
 	}
 
 	public List<dessin> findAllDessin() {
-		final List<dessin> oiseaux = new ArrayList<>();
+		final List<dessin> dessin = new ArrayList<>();
 		boolean first = true;
 		// fichier > ligne
 		final List<String> lignes = lecture();
@@ -35,10 +35,10 @@ public class CsvDessinDao implements DessinDao {
 				first = false;
 				continue;
 			}
-			final dessin oiseau = transform(ligne);
-			oiseaux.add(oiseau);
+			final dessin dessin = transform(ligne);
+			oiseaux.add(dessin);
 		}
-		return oiseaux;
+		return dessin;
 	}
 
 	private forme transform(final String ligne) {
@@ -50,19 +50,19 @@ public class CsvDessinDao implements DessinDao {
 		  final String separator = ","; 
 		  final String[] values = ligne.split(separator);
 		  
-		  oiseau.setAbscisse(Double.valueOf(values[0])); 
-		  oiseau.setOrdonnée(Double.valueOf(values[1]));
+		  dessin.setAbscisse(Double.valueOf(values[0])); 
+		  dessin.setOrdonnée(Double.valueOf(values[1]));
 		  
-		  oiseau.setCouleurs(values[2].split("-"));
+		  dessin.setCouleurs(values[2].split("-"));
 		  
-		  oiseau.setTaille(Double.valueOf(values[3]));
+		  dessin.setTaille(Double.valueOf(values[3]));
 		  
-		  oiseau.setTaille(Double.valueOf(values[4]));
+		  dessin.setTaille(Double.valueOf(values[4]));
 		  
 		  
-		  final Forme forme = 
-				  Forme.valueOfByCode(values[5]); 
-		  oiseau.setForme(forme);
+		  final FormeDessin forme = 
+				  FormeDessin.valueOfByCode(values[5]); 
+		  dessin.setForme(forme);
 		  
 		 	
 		 
