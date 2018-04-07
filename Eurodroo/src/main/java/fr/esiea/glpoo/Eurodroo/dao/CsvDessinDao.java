@@ -42,7 +42,7 @@ public class CsvDessinDao implements DessinDao {
 	}
 
 	private oiseau transform(final String ligne) {
-		final SimpleOiseau oiseau = new SimpleOiseau();
+		final SimpleDessin dessin = new SimpleDessin();
 		
 		//remplir les champs a partir de la ligne
 
