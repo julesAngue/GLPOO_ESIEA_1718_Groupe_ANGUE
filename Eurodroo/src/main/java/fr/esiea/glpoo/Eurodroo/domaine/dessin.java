@@ -4,17 +4,17 @@ import java.util.List;
 
 public interface dessin {
 
-	public double getAbscisse;
+	public double getAbscisse();
 	
-	public double getOrdonnée;
+	public double getOrdonnée();
 	
-	public double getTaille;
+	public double getTaille();
 	
-	public List getForme;
+	public List getForme();
 	
-	public List getCouleur;
+	public List getCouleur();
 	
-	public double getRotation;
+	public double getRotation();
 	
 	
 }
