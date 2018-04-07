@@ -1,2 +1,2 @@
-# GLPOO_ESIEA_1718_Groupe_Unknow
-Projet GLPOO ESIEA 2017-2018 Groupe Unknow
+# GLPOO_ESIEA_1718_Groupe_Angue
+Projet GLPOO ESIEA 2017-2018 Groupe Angue
