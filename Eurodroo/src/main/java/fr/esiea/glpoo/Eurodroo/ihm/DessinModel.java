@@ -23,7 +23,7 @@ public class DessinModel extends AbstractTableModel {
 		entetes = new String[] {
 				"boule","boule"
 		};
-		final String fileName = "ressources/tirage.csv";
+		final String fileName = "C:\\Users\\user\\git\\GLPOO_ESIEA_1718_Groupe_ANGUE\\Eurodroo\\ressources\\tirages.csv";
 		final TirageDao daoCsv = new CsvTirageDao(fileName);
 		dessins = daoCsv.Tirage();
 	}
