@@ -47,7 +47,7 @@ public class CsvDessinDao implements DessinDao {
 		//remplir les champs a partir de la ligne
 
 		  
-		  final String separator = ","; 
+		  final String separator = ";"; 
 		  final String[] values = ligne.split(separator);
 		  
 		  dessin.setAbscisse(Double.valueOf(values[0])); 
