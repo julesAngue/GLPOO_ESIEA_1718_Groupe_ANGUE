@@ -22,7 +22,7 @@ public class CsvTirageDao implements TirageDao {
 
 	public List<dessinTirage> Tirage() {
 		final List<dessinTirage> dessins = new ArrayList<>();
-		boolean first = true;
+		boolean first = false;
 		// fichier > ligne
 		final List<String> lignes = lecture();
 		// ligne > dessin
