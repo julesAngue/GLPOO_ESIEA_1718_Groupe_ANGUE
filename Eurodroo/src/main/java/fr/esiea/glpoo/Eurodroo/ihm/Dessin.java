@@ -4,11 +4,12 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.List;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import org.apache.log4j.Logger;
 
-public class Dessin extends JPanel {
+public class Dessin extends JFrame {
 	
 	private int boule1;
 	private int boule2;
@@ -19,7 +20,23 @@ public class Dessin extends JPanel {
 	private int etoile1;
 	private int etoile2;
 	
-	public void abscisse() {
+	JFrame fenetre2 = new JFrame();
+	
+	public Dessin() {
+		super();
+		
+		setTitle("Dessins");
+	}
+	
+	
+	
+	
+    
+
+	
+	
+	
+	public void abscisse() {	
 		
 	}
 
