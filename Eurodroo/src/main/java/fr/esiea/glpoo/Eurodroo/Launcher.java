@@ -13,8 +13,8 @@ public class Launcher
     public static void main( String[] args )
     {
       
-    	//final TirageJFrame fenetre = new TirageJFrame();
-	//	fenetre.setVisible(true);
+    	final TirageJFrame fenetre = new TirageJFrame();
+		fenetre.setVisible(true);
 		
 		final Dessin fenetre2 = new Dessin();
 	    fenetre2.setVisible(true);

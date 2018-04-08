@@ -22,7 +22,7 @@ public class TirageModel extends AbstractTableModel {
 	public TirageModel() {
 		
 		entetes = new String[] {"nbtirage","boule1","boule2","boule3","boule4","boule5","etoile1","etoile2"};
-		final String fileName = "C:\\Users\\user\\git\\GLPOO_ESIEA_1718_Groupe_ANGUE\\Eurodroo\\ressources\\tirages.csv";
+		final String fileName = "src/main/ressources/tirages.csv";
 
 
 		final TirageDao daoCsv = new CsvTirageDao(fileName);
