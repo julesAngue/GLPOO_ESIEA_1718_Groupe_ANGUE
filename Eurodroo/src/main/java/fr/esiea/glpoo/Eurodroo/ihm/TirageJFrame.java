@@ -30,7 +30,7 @@ public class TirageJFrame extends JFrame {
 	public TirageJFrame(){
 		super();
 
-		setTitle("Dessins");
+		setTitle("Tirage");
 		setPreferredSize(new Dimension(600, 400));
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		final JScrollPane scroll = new JScrollPane(tab);
