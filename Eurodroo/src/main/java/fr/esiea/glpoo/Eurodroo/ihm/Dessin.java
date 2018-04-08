@@ -1,6 +1,7 @@
 package fr.esiea.glpoo.Eurodroo.ihm;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.util.List;
@@ -32,16 +33,24 @@ public class Dessin extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel pan = new JPanel();
-		pan.setBackground(Color.ORANGE);
+		pan.setBackground(Color.WHITE);
 		this.setContentPane(pan);
 		this.setVisible(true);
 		//this.setContentPane(new Forme());
 		//this.setContentPane(new testdessin());
+		
+	/*	if(boule1 = )
+		switch(bouleXIndex) {
+		case 0 :
+			Component jPanel;
+			return getContentPane().add(jPanel);
+		}*/
+		
 		JPanel jPanel=new Forme();
 		JPanel jPanel2=new testdessin();
  
-		jPanel.setBackground(Color.GREEN);
-		jPanel2.setBackground(Color.YELLOW);
+		//jPanel.setBackground(Color.GREEN);
+		//jPanel2.setBackground(Color.YELLOW);
  
 		getContentPane().setLayout(new GridLayout(1,2));
  
