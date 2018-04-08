@@ -36,7 +36,7 @@ public class DessinJFrame extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		final JScrollPane scroll = new JScrollPane(tab);
 		getContentPane().add(scroll, BorderLayout.CENTER);
-
+		
 		final JPanel barreBouton = new JPanel();
 		barreBouton.setBackground(Color.GREEN);
 		final JButton boutonAddDessin = new JButton("Ajouter");
