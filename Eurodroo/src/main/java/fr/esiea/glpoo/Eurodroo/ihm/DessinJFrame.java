@@ -57,7 +57,7 @@ public class DessinJFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			log.debug("ici actionPerformed");
-			final SimpleDessinTirage dessin = new SimpleDessinTirage(33, 12,new String[] { "bleu" },44,44,CARRE);
+			final SimpleDessinTirage dessin = new SimpleDessinTirage(33, 12,3,1,4,4,5,6,6);
 			modele.addDessin(dessin);
 		}
 	}

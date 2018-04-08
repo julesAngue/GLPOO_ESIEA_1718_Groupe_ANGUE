@@ -25,7 +25,7 @@ public class DessinModel extends AbstractTableModel {
 		};
 		final String fileName = "ressources/tirage.csv";
 		final TirageDao daoCsv = new CsvTirageDao(fileName);
-		dessins = daoCsv.findAllDessin();
+		dessins = daoCsv.Tirage();
 	}
 	@Override
 	public int getColumnCount() {
@@ -49,17 +49,17 @@ public class DessinModel extends AbstractTableModel {
 		//return data[rowIndex][columnIndex];
 		switch(columnIndex) {
 		case 0 :
-			return dessin.getAbscisse();
+			return dessin.getBoule1();
 		case 1 :
-			return dessin.getOrdonnée();
+			return dessin.getBoule2();
 		case 2 : 
-			return dessin.getCouleur();
+			return dessin.getBoule3();
 		case 3 :
-			return dessin.getForme();
+			return dessin.getBoule4();
 		case 4 :
-			return dessin.getTaille();
+			return dessin.getBoule5();
 		case 5 :
-			return dessin.getRotation();
+			return dessin.getBoule6();
 		default :
 			throw new IllegalArgumentException("Case doesn't exists");
 		}

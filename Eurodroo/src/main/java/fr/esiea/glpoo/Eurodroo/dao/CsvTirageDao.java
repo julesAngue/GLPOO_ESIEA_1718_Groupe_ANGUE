@@ -20,7 +20,7 @@ public class CsvTirageDao implements TirageDao {
 		this.fileName = fileName;
 	}
 
-	public List<dessinTirage> findAllDessin() {
+	public List<dessinTirage> Tirage() {
 		final List<dessinTirage> dessins = new ArrayList<>();
 		boolean first = true;
 		// fichier > ligne
@@ -66,10 +66,6 @@ public class CsvTirageDao implements TirageDao {
 		  
 		  dessin.setEtoile2(Integer.valueOf(values[11])); //étoile 2
 		  
-		  final FormeDessin forme = 
-				  FormeDessin.valueOfByCode(values[5]); 
-		  dessin.setForme(forme);
-		  
 		 	
 		 
 		return dessin;
@@ -88,5 +84,7 @@ public class CsvTirageDao implements TirageDao {
 		}
 	
 	}
+
+
 }
 	
