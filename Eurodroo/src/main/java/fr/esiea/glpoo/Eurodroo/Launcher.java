@@ -1,13 +1,20 @@
 package fr.esiea.glpoo.Eurodroo;
 
-/**
- * Hello world!
- *
- */
+import org.apache.log4j.Logger;
+
+import fr.esiea.glpoo.Eurodroo.dao.CsvDessinDao;
+import fr.esiea.glpoo.Eurodroo.dao.DessinDao;
+import fr.esiea.glpoo.Eurodroo.domaine.dessin;
+import fr.esiea.glpoo.Eurodroo.ihm.DessinJFrame;
+
 public class Launcher 
 {
+	private final static Logger log = Logger.getLogger(Launcher.class);
     public static void main( String[] args )
     {
-        System.out.println( "Hello World! test" );
+      
+    	final DessinJFrame fenetre = new DessinJFrame();
+		fenetre.setVisible(true);
+    	
     }
 }
