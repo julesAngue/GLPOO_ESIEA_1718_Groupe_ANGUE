@@ -7,8 +7,8 @@ import javax.swing.table.AbstractTableModel;
 import org.apache.log4j.Logger;
 
 import fr.esiea.glpoo.Eurodroo.Launcher;
-import fr.esiea.glpoo.Eurodroo.dao.CsvDessinDao;
-import fr.esiea.glpoo.Eurodroo.dao.DessinDao;
+import fr.esiea.glpoo.Eurodroo.dao.CsvTirageDao;
+import fr.esiea.glpoo.Eurodroo.dao.TirageDao;
 import fr.esiea.glpoo.Eurodroo.domaine.dessin;
 
 public class DessinModel extends AbstractTableModel {
@@ -24,7 +24,7 @@ public class DessinModel extends AbstractTableModel {
 				"boule","boule"
 		};
 		final String fileName = "ressources/tirage.csv";
-		final DessinDao daoCsv = new CsvDessinDao(fileName);
+		final TirageDao daoCsv = new CsvTirageDao(fileName);
 		dessins = daoCsv.findAllDessin();
 	}
 	@Override

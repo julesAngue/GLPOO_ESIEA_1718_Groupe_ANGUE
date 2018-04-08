@@ -12,11 +12,11 @@ import fr.esiea.glpoo.Eurodroo.domaine.dessin;
 import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessin;
 import fr.esiea.glpoo.Eurodroo.domaine.FormeDessin;
 
-public class CsvDessinDao implements DessinDao {
+public class CsvTirageDao implements TirageDao {
 	
 	private final String fileName;
 
-	public CsvDessinDao(String fileName) {
+	public CsvTirageDao(String fileName) {
 		this.fileName = fileName;
 	}
 
