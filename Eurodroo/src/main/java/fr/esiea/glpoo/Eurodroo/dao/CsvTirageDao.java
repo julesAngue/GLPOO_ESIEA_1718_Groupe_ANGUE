@@ -22,7 +22,9 @@ public class CsvTirageDao implements TirageDao {
 
 	public List<dessinTirage> Tirage() {
 		final List<dessinTirage> dessins = new ArrayList<>();
-		boolean first = false;
+
+		//boolean first = false;
+
 		// fichier > ligne
 		final List<String> lignes = lecture();
 		// ligne > dessin
@@ -30,11 +32,10 @@ public class CsvTirageDao implements TirageDao {
 			if (ligne.trim().isEmpty() || ligne.startsWith("#")) {
 				continue;
 			}
-			
-			if (first) {
+		/*	if (first) {
 				first = false;
 				continue;
-			}
+			}*/
 			final dessinTirage dessin = transform(ligne);
 			dessins.add(dessin);
 		}
