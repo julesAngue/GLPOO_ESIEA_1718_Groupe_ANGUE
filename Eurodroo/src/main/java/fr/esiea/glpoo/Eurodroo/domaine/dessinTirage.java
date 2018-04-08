@@ -4,17 +4,25 @@ import java.util.List;
 
 public interface dessinTirage {
 
-	public int getAbscisse();
+	public int getNbTirage();
 	
-	public int getOrdonnée();
+	public int getBoule1();
 	
-	public int getTaille();
+	public int getBoule2();
 	
-	public FormeDessin getForme();
+	public int getBoule3();
 	
-	public List getCouleur();
+	public int getBoule4();
 	
-	public int getRotation();
+	public int getBoule5();
+	
+	public int getBoule6();
+	
+	public int getEtoile1();
+	
+	public int getEtoile2();
+	
+	
 
 	
 	

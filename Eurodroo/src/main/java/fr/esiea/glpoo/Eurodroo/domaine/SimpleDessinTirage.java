@@ -5,82 +5,122 @@ import java.util.List;
 
 public class SimpleDessinTirage implements dessinTirage{
 	
-	private int abscisse;
-	private int ordonnée;
-	private String[] couleurs;
-	private int taille;
-	private int rotation;
-	private FormeDessin forme;
+	private int nbTirage;
+	private int boule1;
+	private int boule2;
+	private int boule3;
+	private int boule4;
+	private int boule5;
+	private int boule6;
+	private int etoile1;
+	private int etoile2;
 	
 
 	public SimpleDessinTirage() {
 		super();
 	}
 
-	public SimpleDessinTirage(int abscisse, int ordonnée, String[] couleurs, int taille, int rotation, FormeDessin forme) {
+	public SimpleDessinTirage(int boule1, int boule2, int boule3, int boule4, int boule5,int boule6, int etoile1,int etoile2, int nbTirage) {
 		this();
-		this.abscisse = abscisse;
-		this.ordonnée = ordonnée;
-		this.couleurs = couleurs;
-		this.taille = taille;
-		this.rotation = rotation;
-		this.forme = forme;
+		
+		this.nbTirage = nbTirage;
+		this.boule1 = boule1;
+		this.boule2 = boule2;
+		this.boule3 = boule3;
+		this.boule4 = boule4;
+		this.boule5 = boule5;
+		this.boule6 = boule6;
+		this.etoile1 = etoile1;
+		this.etoile2 = etoile2;
+		
 
 	}
 	
 
-	public int getAbscisse() {
-		return abscisse;
+	public int getNbTirage() {
+		return nbTirage;
 	}
 
-	public void setAbscisse(int abscisse) {
-		this.abscisse = abscisse;
+
+	public void setNbTirage(int nbTirage) {
+		this.nbTirage = nbTirage;
+		
+	}
+
+	
+	public int getBoule1() {
+		
+		return boule1;
 	}
 	
-	public int getOrdonnée() {
-		return ordonnée;
+	public void setBoule1(int boule1) {
+		this.boule1 = boule1;
 	}
 
-	public void setOrdonnée(int ordonnée) {
-		this.ordonnée = ordonnée;
+	
+	public int getBoule2() {
+		
+		return boule2;
 	}
 
-	public int getTaille() {
-		return taille;
+	public void setBoule2(int boule2) {
+		this.boule2 = boule2;
 	}
 
-	public void setTaille(int taille) {
-		this.taille = taille;
+	
+	public int getBoule3() {
+		return boule3;
 	}
 
-	public int getRotation() {
-		return rotation;
+	public void setBoule3(int boule3) {
+		this.boule3 = boule3;
 	}
 
-	public void setRotation(int rotation) {
-		this.rotation = rotation;
+	
+	public int getBoule4() {
+		return boule4;
+	}
+	
+	public void setBoule4(int boule4) {
+		this.boule4 = boule4;
 	}
 
-	public FormeDessin getForme() {
-		return forme;
+	
+	public int getBoule5() {
+		return boule5;
+	}
+	
+	public void setBoule5(int boule5) {
+		this.boule5 = boule5;
 	}
 
-	public void setForme(FormeDessin forme) {
-		this.forme = forme;
+
+	
+	public int getBoule6() {
+		return boule6;
+	}
+	
+	public void setBoule6(int boule6) {
+		this.boule6 = boule6;
 	}
 
-
-	public void setCouleurs(String[] couleurs) {
-		this.couleurs = couleurs;
+	
+	public int getEtoile1() {
+		return etoile1;
+	}
+	
+	public void setEtoile1(int etoile1) {
+		this.etoile1 = etoile1;
 	}
 
-	public List getCouleur() {
-		List<String> couleurList = new ArrayList<String>();
-		for (String couleur : couleurs) {
-			couleurList.add(couleur);
-		}
-		return couleurList;
+	public int getEtoile2() {
+		return etoile2;
 	}
+	
+	public void setEtoile2(int etoile2) {
+		this.boule2 = boule2;
+	}
+
 
 
 
