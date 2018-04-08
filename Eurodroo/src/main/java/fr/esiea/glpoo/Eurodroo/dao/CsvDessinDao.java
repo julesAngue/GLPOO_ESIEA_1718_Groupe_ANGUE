@@ -50,15 +50,21 @@ public class CsvDessinDao implements DessinDao {
 		  final String separator = ";"; 
 		  final String[] values = ligne.split(separator);
 		  
-		  dessin.setAbscisse(Double.valueOf(values[0])); 
-		  dessin.setOrdonnée(Double.valueOf(values[1]));
+		  dessin.setNbTirage(Integer.valueOf(values[0])); //Numero tirage
 		  
-		  dessin.setCouleurs(values[2].split("-"));
+		  dessin.setBoule1(Integer.valueOf(values[5])); //boule 1
 		  
-		  dessin.setTaille(Double.valueOf(values[3]));
+		  dessin.setBoule2(Integer.valueOf(values[6])); //boule 2
 		  
-		  dessin.setTaille(Double.valueOf(values[4]));
+		  dessin.setBoule3(Integer.valueOf(values[7])); //boule 3
 		  
+		  dessin.setBoule4(Integer.valueOf(values[8])); //boule 4
+		  
+		  dessin.setBoule5(Integer.valueOf(values[9])); //boule 5
+		  
+		  dessin.setEtoile1(Integer.valueOf(values[10])); //étoile 1
+		  
+		  dessin.setEtoile2(Integer.valueOf(values[11])); //étoile 2
 		  
 		  final FormeDessin forme = 
 				  FormeDessin.valueOfByCode(values[5]); 
