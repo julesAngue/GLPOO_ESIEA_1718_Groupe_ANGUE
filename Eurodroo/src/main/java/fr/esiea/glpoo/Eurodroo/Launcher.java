@@ -3,7 +3,7 @@ import org.apache.log4j.Logger;
 
 import fr.esiea.glpoo.Eurodroo.dao.CsvTirageDao;
 import fr.esiea.glpoo.Eurodroo.dao.TirageDao;
-import fr.esiea.glpoo.Eurodroo.domaine.dessin;
+import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
 import fr.esiea.glpoo.Eurodroo.ihm.DessinJFrame;
 
 public class Launcher 

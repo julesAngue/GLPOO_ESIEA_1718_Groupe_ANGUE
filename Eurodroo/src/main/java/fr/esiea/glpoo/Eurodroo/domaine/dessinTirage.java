@@ -2,7 +2,7 @@ package fr.esiea.glpoo.Eurodroo.domaine;
 
 import java.util.List;
 
-public interface dessin {
+public interface dessinTirage {
 
 	public int getAbscisse();
 	

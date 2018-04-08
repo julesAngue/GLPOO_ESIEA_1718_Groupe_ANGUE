@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import fr.esiea.glpoo.Eurodroo.Launcher;
 import fr.esiea.glpoo.Eurodroo.dao.CsvTirageDao;
 import fr.esiea.glpoo.Eurodroo.dao.TirageDao;
-import fr.esiea.glpoo.Eurodroo.domaine.dessin;
+import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
 
 public class DessinModel extends AbstractTableModel {
 
@@ -17,7 +17,7 @@ public class DessinModel extends AbstractTableModel {
 	
 	final String[] entetes;
 	
-	private final List<dessin> dessins;
+	private final List<dessinTirage> dessins;
 	
 	public DessinModel() {
 		entetes = new String[] {
@@ -45,7 +45,7 @@ public class DessinModel extends AbstractTableModel {
 	public Object getValueAt(int rowIndex, int columnIndex) {
 		// TODO Auto-generated method stub
 		
-		final dessin dessin = dessins.get(rowIndex);
+		final dessinTirage dessin = dessins.get(rowIndex);
 		//return data[rowIndex][columnIndex];
 		switch(columnIndex) {
 		case 0 :
@@ -70,7 +70,7 @@ public class DessinModel extends AbstractTableModel {
 		// TODO Auto-generated method stub
 		return entetes[column];
 	}
-	public void addDessin(final dessin dessin) {
+	public void addDessin(final dessinTirage dessin) {
 		
 		Log.debug("ajouterDessin");
 		dessins.add(dessin);

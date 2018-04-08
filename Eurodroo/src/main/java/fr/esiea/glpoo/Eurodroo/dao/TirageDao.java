@@ -1,10 +1,10 @@
 package fr.esiea.glpoo.Eurodroo.dao;
 
 import java.util.List;
-import fr.esiea.glpoo.Eurodroo.domaine.dessin;
+import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
 
 public interface TirageDao {
 	
-	public List<dessin>findAllDessin();
+	public List<dessinTirage>findAllDessin();
 
 }

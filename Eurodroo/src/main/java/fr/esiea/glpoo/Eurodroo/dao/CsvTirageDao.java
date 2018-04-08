@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import fr.esiea.glpoo.Eurodroo.domaine.dessin;
-import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessin;
+import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
+import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessinTirage;
 import fr.esiea.glpoo.Eurodroo.domaine.FormeDessin;
 
 public class CsvTirageDao implements TirageDao {
@@ -20,8 +20,8 @@ public class CsvTirageDao implements TirageDao {
 		this.fileName = fileName;
 	}
 
-	public List<dessin> findAllDessin() {
-		final List<dessin> dessins = new ArrayList<>();
+	public List<dessinTirage> findAllDessin() {
+		final List<dessinTirage> dessins = new ArrayList<>();
 		boolean first = true;
 		// fichier > ligne
 		final List<String> lignes = lecture();
@@ -35,14 +35,14 @@ public class CsvTirageDao implements TirageDao {
 				first = false;
 				continue;
 			}
-			final dessin dessin = transform(ligne);
+			final dessinTirage dessin = transform(ligne);
 			dessins.add(dessin);
 		}
 		return dessins;
 	}
 
-	private dessin transform(final String ligne) {
-		final SimpleDessin dessin = new SimpleDessin();
+	private dessinTirage transform(final String ligne) {
+		final SimpleDessinTirage dessin = new SimpleDessinTirage();
 		
 		//remplir les champs a partir de la ligne
 

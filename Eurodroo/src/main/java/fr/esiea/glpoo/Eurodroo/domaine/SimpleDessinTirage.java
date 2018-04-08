@@ -3,7 +3,7 @@ package fr.esiea.glpoo.Eurodroo.domaine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SimpleDessin implements dessin{
+public class SimpleDessinTirage implements dessinTirage{
 	
 	private int abscisse;
 	private int ordonnée;
@@ -13,11 +13,11 @@ public class SimpleDessin implements dessin{
 	private FormeDessin forme;
 	
 
-	public SimpleDessin() {
+	public SimpleDessinTirage() {
 		super();
 	}
 
-	public SimpleDessin(int abscisse, int ordonnée, String[] couleurs, int taille, int rotation, FormeDessin forme) {
+	public SimpleDessinTirage(int abscisse, int ordonnée, String[] couleurs, int taille, int rotation, FormeDessin forme) {
 		this();
 		this.abscisse = abscisse;
 		this.ordonnée = ordonnée;

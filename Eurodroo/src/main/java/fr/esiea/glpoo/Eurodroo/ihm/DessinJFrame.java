@@ -18,7 +18,7 @@ import javax.swing.JTable;
 
 import fr.esiea.glpoo.Eurodroo.Launcher;
 import fr.esiea.glpoo.Eurodroo.domaine.FormeDessin;
-import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessin;
+import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessinTirage;
 
 import org.apache.log4j.Logger;
 
@@ -57,7 +57,7 @@ public class DessinJFrame extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			log.debug("ici actionPerformed");
-			final SimpleDessin dessin = new SimpleDessin(33, 12,new String[] { "bleu" },44,44,CARRE);
+			final SimpleDessinTirage dessin = new SimpleDessinTirage(33, 12,new String[] { "bleu" },44,44,CARRE);
 			modele.addDessin(dessin);
 		}
 	}
