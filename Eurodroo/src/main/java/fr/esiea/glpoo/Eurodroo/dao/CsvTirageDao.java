@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
 import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessinTirage;
-import fr.esiea.glpoo.Eurodroo.domaine.FormeDessin;
+
 
 public class CsvTirageDao implements TirageDao {
 	
