@@ -5,11 +5,11 @@ import java.util.List;
 
 public class SimpleDessin implements dessin{
 	
-	private double abscisse;
-	private double ordonnée;
+	private int abscisse;
+	private int ordonnée;
 	private String[] couleurs;
-	private double taille;
-	private double rotation;
+	private int taille;
+	private int rotation;
 	private FormeDessin forme;
 	
 
@@ -17,7 +17,7 @@ public class SimpleDessin implements dessin{
 		super();
 	}
 
-	public SimpleDessin(double abscisse, double ordonnée, String[] couleurs, double taille, double rotation, FormeDessin forme) {
+	public SimpleDessin(int abscisse, int ordonnée, String[] couleurs, int taille, int rotation, FormeDessin forme) {
 		this();
 		this.abscisse = abscisse;
 		this.ordonnée = ordonnée;
@@ -29,35 +29,35 @@ public class SimpleDessin implements dessin{
 	}
 	
 
-	public double getAbscisse() {
+	public int getAbscisse() {
 		return abscisse;
 	}
 
-	public void setAbscisse(double abscisse) {
+	public void setAbscisse(int abscisse) {
 		this.abscisse = abscisse;
 	}
 	
-	public double getOrdonnée() {
+	public int getOrdonnée() {
 		return ordonnée;
 	}
 
-	public void setOrdonnée(double ordonnée) {
+	public void setOrdonnée(int ordonnée) {
 		this.ordonnée = ordonnée;
 	}
 
-	public double getTaille() {
+	public int getTaille() {
 		return taille;
 	}
 
-	public void setTaille(double taille) {
+	public void setTaille(int taille) {
 		this.taille = taille;
 	}
 
-	public double getRotation() {
+	public int getRotation() {
 		return rotation;
 	}
 
-	public void setRotation(double rotation) {
+	public void setRotation(int rotation) {
 		this.rotation = rotation;
 	}
 
@@ -69,13 +69,6 @@ public class SimpleDessin implements dessin{
 		this.forme = forme;
 	}
 
-	public List getCouleurs() {
-		List<String> couleurList = new ArrayList<String>();
-		for (String couleur : couleurs) {
-			couleurList.add(couleur);
-		}
-		return couleurList;
-	}
 
 	public void setCouleurs(String[] couleurs) {
 		this.couleurs = couleurs;
