@@ -62,10 +62,8 @@ public class DessinModel extends AbstractTableModel {
 		case 5 :
 			return dessin.getBoule5();
 		case 6 :
-			return dessin.getBoule6();
-		case 7 :
 			return dessin.getEtoile1();
-		case 8 :
+		case 7 :
 			return dessin.getEtoile2();
 		default :
 			throw new IllegalArgumentException("Case doesn't exists");
