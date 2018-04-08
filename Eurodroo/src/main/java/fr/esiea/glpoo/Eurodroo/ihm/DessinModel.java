@@ -20,8 +20,10 @@ public class DessinModel extends AbstractTableModel {
 	private final List<dessinTirage> dessins;
 	
 	public DessinModel() {
+		
 		entetes = new String[] {"nbtirage","boule1","boule2","boule3","boule4","boule5","etoile1","etoile2"};
 		final String fileName = "C:\\Users\\Charly\\git\\GLPOO\\Eurodroo\\ressources\\tirages.csv";
+
 		final TirageDao daoCsv = new CsvTirageDao(fileName);
 		dessins = daoCsv.Tirage();
 	}

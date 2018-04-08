@@ -118,7 +118,7 @@ public class SimpleDessinTirage implements dessinTirage{
 	}
 	
 	public void setEtoile2(int etoile2) {
-		this.boule2 = boule2;
+		this.etoile2 = etoile2;
 	}
 
 
