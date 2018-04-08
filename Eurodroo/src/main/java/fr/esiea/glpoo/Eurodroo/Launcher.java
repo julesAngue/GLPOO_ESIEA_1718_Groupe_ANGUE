@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import fr.esiea.glpoo.Eurodroo.dao.CsvTirageDao;
 import fr.esiea.glpoo.Eurodroo.dao.TirageDao;
 import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
-import fr.esiea.glpoo.Eurodroo.ihm.DessinJFrame;
+import fr.esiea.glpoo.Eurodroo.ihm.TirageJFrame;
 
 public class Launcher 
 {
@@ -12,7 +12,7 @@ public class Launcher
     public static void main( String[] args )
     {
       
-    	final DessinJFrame fenetre = new DessinJFrame();
+    	final TirageJFrame fenetre = new TirageJFrame();
 		fenetre.setVisible(true);
     	
     }

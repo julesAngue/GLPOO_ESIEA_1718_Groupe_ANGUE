@@ -1,7 +1,6 @@
 package fr.esiea.glpoo.Eurodroo.ihm;
 
 
-import static fr.esiea.glpoo.Eurodroo.domaine.FormeDessin.CARRE;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -17,18 +16,18 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import fr.esiea.glpoo.Eurodroo.Launcher;
-import fr.esiea.glpoo.Eurodroo.domaine.FormeDessin;
+
 import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessinTirage;
 
 import org.apache.log4j.Logger;
 
-public class DessinJFrame extends JFrame {
+public class TirageJFrame extends JFrame {
 	
-	private final static Logger log = Logger.getLogger(DessinJFrame.class);
-	private final DessinModel modele = new DessinModel();
+	private final static Logger log = Logger.getLogger(TirageJFrame.class);
+	private final TirageModel modele = new TirageModel();
 	final JTable tab = new JTable(modele);
 
-	public DessinJFrame(){
+	public TirageJFrame(){
 		super();
 
 		setTitle("Dessins");

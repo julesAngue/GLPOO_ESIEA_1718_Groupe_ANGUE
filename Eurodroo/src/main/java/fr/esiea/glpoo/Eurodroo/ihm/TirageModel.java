@@ -11,15 +11,15 @@ import fr.esiea.glpoo.Eurodroo.dao.CsvTirageDao;
 import fr.esiea.glpoo.Eurodroo.dao.TirageDao;
 import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
 
-public class DessinModel extends AbstractTableModel {
+public class TirageModel extends AbstractTableModel {
 
-	private final static Logger Log = Logger.getLogger(DessinModel.class);
+	private final static Logger Log = Logger.getLogger(TirageModel.class);
 	
 	final String[] entetes;
 	
 	private final List<dessinTirage> dessins;
 	
-	public DessinModel() {
+	public TirageModel() {
 		
 		entetes = new String[] {"nbtirage","boule1","boule2","boule3","boule4","boule5","etoile1","etoile2"};
 		final String fileName = "C:\\Users\\user\\git\\GLPOO_ESIEA_1718_Groupe_ANGUE\\Eurodroo\\ressources\\tirages.csv";
