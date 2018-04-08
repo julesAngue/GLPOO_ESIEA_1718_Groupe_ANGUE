@@ -2,6 +2,7 @@ package fr.esiea.glpoo.Eurodroo.ihm;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.GridLayout;
 import java.util.List;
 
 import javax.swing.JFrame;
@@ -26,6 +27,31 @@ public class Dessin extends JFrame {
 		super();
 		
 		setTitle("Dessins");
+		setSize(400,100);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel pan = new JPanel();
+		pan.setBackground(Color.ORANGE);
+		this.setContentPane(pan);
+		this.setVisible(true);
+		//this.setContentPane(new Forme());
+		//this.setContentPane(new testdessin());
+		JPanel jPanel=new Forme();
+		JPanel jPanel2=new testdessin();
+ 
+		jPanel.setBackground(Color.GREEN);
+		jPanel2.setBackground(Color.YELLOW);
+ 
+		getContentPane().setLayout(new GridLayout(1,2));
+ 
+		getContentPane().add(jPanel);
+		getContentPane().add(jPanel2);
+ 
+		setSize(640,480);
+		setVisible(true);
+		
+		
 	}
 	
 	
