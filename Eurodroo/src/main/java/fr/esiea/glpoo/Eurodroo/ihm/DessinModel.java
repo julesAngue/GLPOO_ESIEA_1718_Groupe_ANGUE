@@ -6,6 +6,7 @@ import javax.swing.table.AbstractTableModel;
 
 import org.apache.log4j.Logger;
 
+import fr.esiea.glpoo.Eurodroo.Launcher;
 import fr.esiea.glpoo.Eurodroo.dao.CsvDessinDao;
 import fr.esiea.glpoo.Eurodroo.dao.DessinDao;
 import fr.esiea.glpoo.Eurodroo.domaine.dessin;

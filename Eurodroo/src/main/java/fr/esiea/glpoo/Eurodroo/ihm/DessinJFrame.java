@@ -16,7 +16,7 @@ import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import fr.esiea.glpoo.Eurodroo.App;
+import fr.esiea.glpoo.Eurodroo.Launcher;
 import fr.esiea.glpoo.Eurodroo.domaine.FormeDessin;
 import fr.esiea.glpoo.Eurodroo.domaine.SimpleDessin;
 
