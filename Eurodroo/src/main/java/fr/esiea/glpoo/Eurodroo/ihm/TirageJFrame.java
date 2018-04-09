@@ -1,5 +1,8 @@
 package fr.esiea.glpoo.Eurodroo.ihm;
 
+import static java.awt.BorderLayout.SOUTH;
+
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -34,17 +37,28 @@ public class TirageJFrame extends JFrame {
 		final JScrollPane scroll = new JScrollPane(tab);
 		getContentPane().add(scroll, BorderLayout.CENTER);
 
-		final JPanel barreBouton = new JPanel();
+
+		/*final JPanel barreBouton = new JPanel();
 		barreBouton.setBackground(Color.GREEN);
 		final JButton boutonDessin = new JButton("Dessiner");
 		barreBouton.add(boutonDessin);
-		getContentPane().add(barreBouton, BorderLayout.SOUTH);
+		getContentPane().add(barreBouton, BorderLayout.SOUTH);*/
+
+		final JPanel boutons = new JPanel();
+        boutons.add(new JButton(new Dessiner()));
+        getContentPane().add(boutons, SOUTH);
+        
+
 		pack();
 
 	}
 
-	/*public int[] getValues() {
 
+	/*public int[] getValues() {
+=======
+>>>>>>> refs/remotes/origin/master
+
+<<<<<<< HEAD
 		final int[] values = tab.getSelectedRows();
 		for (int i = 0; i <= values.length; i++) {
 			log.debug(values[i]);
@@ -67,5 +81,17 @@ public class TirageJFrame extends JFrame {
 			}
 		}
 	}
-	
+
+	private class Dessiner extends AbstractAction {
+
+        private Dessiner() {
+            super("Dessiner");
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            log.debug("Click sur le bouton ajouter");
+        }
+    }
+
 }
