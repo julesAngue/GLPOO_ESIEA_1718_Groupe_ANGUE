@@ -125,7 +125,7 @@ public class TirageJFrame extends JFrame {
 				
 
 			}
-			fenetre2.drawPanel();
+			//fenetre2.drawPanel(); 
 		}
 	}
 }

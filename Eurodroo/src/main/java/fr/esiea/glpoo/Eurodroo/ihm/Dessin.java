@@ -28,8 +28,12 @@ public class Dessin extends JFrame {
 	private Object boule5;
 	private Object etoile1;
 	private Object etoile2;
-	private JPanel jPanel;
+	private Oval jPanel;
 	private FillOval jPanel2;
+	private Rectangle jPanel3;
+	private fillRectangle jPanel4;
+	private Triangle jPanel5;
+	private FillTriangle jPanel6;
 	
 	
 	public Dessin() {
@@ -53,14 +57,19 @@ public class Dessin extends JFrame {
 		
 		this.jPanel = new Oval();
 		this.jPanel2 = new FillOval();
+		this.jPanel3 = new Rectangle();
+		this.jPanel4 = new fillRectangle();
+		this.jPanel5 = new Triangle();
+		this.jPanel6 = new FillTriangle();
 
 		// jPanel.setBackground(Color.GREEN);
 		// jPanel2.setBackground(Color.YELLOW);
 
 		getContentPane().setLayout(new GridLayout(1, 2));
 
-		getContentPane().add(jPanel);
-		getContentPane().add(jPanel2);
+		//getContentPane().add(jPanel);
+		//getContentPane().add(jPanel2);
+		getContentPane().add(jPanel4);
 
 		setSize(640, 480);
 		setVisible(true);
@@ -126,14 +135,14 @@ public class Dessin extends JFrame {
 	public void setEtoile2(Object etoile2) {
 		this.etoile2 = etoile2;
 	}
-	public void drawPanel() {
+	/*public void drawPanel() {
 		// fonction pour changer les formes
 		getContentPane().remove(jPanel2);
 		this.jPanel2 = new FillOval();
 		getContentPane().add(jPanel);
 		log.debug( boule1);
 		
-	}
+	}*/
 	
 
 }
