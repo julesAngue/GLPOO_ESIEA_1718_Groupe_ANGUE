@@ -17,8 +17,7 @@ public class Launcher
     	final TirageJFrame fenetre = new TirageJFrame();
 		fenetre.setVisible(true);
 		
-		final Dessin fenetre2 = new Dessin();
-	    fenetre2.setVisible(true);
+
 
     	
     }
