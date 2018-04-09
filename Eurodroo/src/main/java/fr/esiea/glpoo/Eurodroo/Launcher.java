@@ -5,7 +5,7 @@ import fr.esiea.glpoo.Eurodroo.dao.CsvTirageDao;
 import fr.esiea.glpoo.Eurodroo.dao.TirageDao;
 import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
 import fr.esiea.glpoo.Eurodroo.ihm.TirageJFrame;
-import fr.esiea.glpoo.Eurodroo.ihm.Dessin;
+import fr.esiea.glpoo.Eurodroo.ihm.Oval;
 
 public class Launcher 
 {
@@ -17,8 +17,7 @@ public class Launcher
     	final TirageJFrame fenetre = new TirageJFrame();
 		fenetre.setVisible(true);
 		
-		final Dessin fenetre2 = new Dessin();
-	    fenetre2.setVisible(true);
+
 
     	
     }
