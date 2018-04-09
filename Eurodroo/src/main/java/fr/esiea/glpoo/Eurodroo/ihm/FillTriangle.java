@@ -58,7 +58,7 @@ public class FillTriangle extends JPanel {
 	 g.setFont(new Font("Arial",Font.BOLD,14));  
 	  
 	 //Draw String in JPanel  
-	 g.drawString(boule,10,200);  
+	 g.drawString(boule,(boule1 * (0+boule1)) % (640 - boule3),(boule2 * (0+boule2)) % (640 - boule4));  
 
 	 g.setColor(c);
 	}  
