@@ -28,12 +28,7 @@ public class Dessin extends JFrame {
 	private int boule5;
 	private int etoile1;
 	private int etoile2;
-	private Oval jPanel;
-	private FillOval jPanel2;
-	private Rectangle jPanel3;
-	private fillRectangle jPanel4;
-	private Triangle jPanel5;
-	private FillTriangle jPanel6;
+	private JPanel jPanel;
 
 	public Dessin(int boule1, int boule2, int boule3, int boule4, int boule5, int etoile1, int etoile2) {
 		super();
@@ -61,12 +56,8 @@ public class Dessin extends JFrame {
 		 * switch(bouleXIndex) { case 0 : return getContentPane().add(jPanel); }
 		 */
 
-		this.jPanel = new Oval();
-		this.jPanel2 = new FillOval();
-		this.jPanel3 = new Rectangle();
-		this.jPanel4 = new fillRectangle();
-		this.jPanel5 = new Triangle();
-		this.jPanel6 = new FillTriangle();
+		this.jPanel = etoileToForme(etoile1);
+
 
 		// jPanel.setBackground(Color.GREEN);
 		// jPanel2.setBackground(Color.YELLOW);
@@ -74,12 +65,9 @@ public class Dessin extends JFrame {
 		getContentPane().setLayout(new GridLayout(1, 2));
 
 
-		//getContentPane().add(jPanel);//ov
-		getContentPane().add(jPanel2);//fillov
-		//getContentPane().add(jPanel3);//rec
-		//getContentPane().add(jPanel4);
-		//getContentPane().add(jPanel5);//tri
-		//getContentPane().add(jPanel6);
+
+		getContentPane().add(jPanel);
+
 
 		setSize(640, 480);
 		setVisible(true);
