@@ -21,23 +21,29 @@ public class Dessin extends JFrame {
 
 	private final static Logger log = Logger.getLogger(TirageJFrame.class);
 	JFrame fenetre2 = new JFrame();
-	private Object boule1;
-	private Object boule2;
-	private Object boule3;
-	private Object boule4;
-	private Object boule5;
-	private Object etoile1;
-	private Object etoile2;
+	private int boule1;
+	private int boule2;
+	private int boule3;
+	private int boule4;
+	private int boule5;
+	private int etoile1;
+	private int etoile2;
 	private Oval jPanel;
 	private FillOval jPanel2;
 	private Rectangle jPanel3;
 	private fillRectangle jPanel4;
 	private Triangle jPanel5;
 	private FillTriangle jPanel6;
-	
-	
-	public Dessin() {
+
+	public Dessin(int boule1, int boule2, int boule3, int boule4, int boule5, int etoile1, int etoile2) {
 		super();
+		this.boule1 = boule1;
+		this.boule2 = boule2;
+		this.boule3 = boule3;
+		this.boule4 = boule4;
+		this.boule5 = boule5;
+		this.etoile1 = etoile1;
+		this.etoile2 = etoile2;
 
 		setTitle("Dessins");
 		setSize(400, 100);
@@ -54,7 +60,7 @@ public class Dessin extends JFrame {
 		/*
 		 * switch(bouleXIndex) { case 0 : return getContentPane().add(jPanel); }
 		 */
-		
+
 		this.jPanel = new Oval();
 		this.jPanel2 = new FillOval();
 		this.jPanel3 = new Rectangle();
@@ -67,8 +73,8 @@ public class Dessin extends JFrame {
 
 		getContentPane().setLayout(new GridLayout(1, 2));
 
-		//getContentPane().add(jPanel);
-		//getContentPane().add(jPanel2);
+		// getContentPane().add(jPanel);
+		// getContentPane().add(jPanel2);
 		getContentPane().add(jPanel3);
 
 		setSize(640, 480);
@@ -108,41 +114,34 @@ public class Dessin extends JFrame {
 
 	}
 
-	public void setBoule1(Object boule1) {
-		this.boule1 = boule1;
+	public JPanel etoileToForme(int boule) {
+		JPanel panel = new JPanel();
+		switch (boule) {
+		case 1:
+		case 2:
+			panel = new Oval();
+			break;
+		case 3:
+		case 4:
+			panel = new FillOval();
+			break;
+		case 5:
+		case 6:
+			panel = new Rectangle();
+			break;
+		case 7:
+		case 8:
+			panel = new fillRectangle();
+			break;
+		case 9:
+		case 10:
+			panel = new Triangle();
+			break;
+		case 11:
+		case 12:
+			panel = new FillTriangle();
+			break;
+		}
+		return panel;
 	}
-
-	public void setBoule2(Object boule2) {
-		this.boule2 = boule2;
-	}
-
-	public void setBoule3(Object boule3) {
-		this.boule3 = boule3;
-	}
-
-	public void setBoule4(Object boule4) {
-		this.boule4 = boule4;
-	}
-
-	public void setBoule5(Object boule5) {
-		this.boule5 = boule5;
-	}
-
-	public void setEtoile1(Object etoile1) {
-		this.etoile1 = etoile1;
-	}
-
-	public void setEtoile2(Object etoile2) {
-		this.etoile2 = etoile2;
-	}
-	/*public void drawPanel() {
-		// fonction pour changer les formes
-		getContentPane().remove(jPanel2);
-		this.jPanel2 = new FillOval();
-		getContentPane().add(jPanel);
-		log.debug( boule1);
-		
-	}*/
-	
-
 }

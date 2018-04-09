@@ -24,7 +24,7 @@ import fr.esiea.glpoo.Eurodroo.ihm.TirageModel;
 import org.apache.log4j.Logger;
 
 public class TirageJFrame extends JFrame {
-	private final Dessin fenetre2;
+	private Dessin fenetre2;
 	private final static Logger log = Logger.getLogger(TirageJFrame.class);
 	private final TirageModel modele = new TirageModel();
 	final JTable tab = new JTable(modele);
@@ -50,9 +50,8 @@ public class TirageJFrame extends JFrame {
 		getContentPane().add(boutons, SOUTH);
 
 		pack();
-		this.fenetre2 = new Dessin();
-	    fenetre2.setVisible(true);
-		
+		fenetre2 = new Dessin(0,0,0,0,0,0,0);
+		fenetre2.setVisible(true);
 	}
 
 	/*
@@ -73,19 +72,14 @@ public class TirageJFrame extends JFrame {
 	 * } } }
 	 */
 
-
-	
-	
-
-	private Object boule1;
-	private Object boule2;
-	private Object boule3;
-	private Object boule4;
-	private Object boule5;
-	private Object etoile1;
-	private Object etoile2;
-	//public Object values;
-
+	private int boule1;
+	private int boule2;
+	private int boule3;
+	private int boule4;
+	private int boule5;
+	private int etoile1;
+	private int etoile2;
+	// public Object values;
 
 	public class Dessiner extends AbstractAction {
 
@@ -96,36 +90,25 @@ public class TirageJFrame extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			log.debug("Click sur le bouton ajouter");
+			fenetre2.setVisible(false);
+			fenetre2.dispose();
+
 			final int[] rows = tab.getSelectedRows();
 			for (int i = 0; i < rows.length; i++) {
 				log.debug(rows[i]);
-				boule1 = tab.getValueAt(rows[i], 1);
+				boule1 = (int) tab.getValueAt(rows[i], 1);
+				boule2 = (int) tab.getValueAt(rows[i], 2);
+				boule3 = (int) tab.getValueAt(rows[i], 3);
+				boule4 = (int) tab.getValueAt(rows[i], 4);
+				boule5 = (int) tab.getValueAt(rows[i], 5);
+				etoile1 = (int) tab.getValueAt(rows[i], 6);
+				etoile2 = (int) tab.getValueAt(rows[i], 7);
 
-				//log.debug(boule1);
-			
-				/*for (int j = 0; j < modele.getColumnCount(); j++) {
-				log.debug(tab.getValueAt(rows[i], j ));
-					values = tab.getValueAt(rows[i], j);
-					log.debug(values);
-				}*/
-
-				boule2 = tab.getValueAt(rows[i], 2);
-				boule3 = tab.getValueAt(rows[i], 3);
-				boule4 = tab.getValueAt(rows[i], 4);
-				boule5 = tab.getValueAt(rows[i], 5);
-				etoile1 = tab.getValueAt(rows[i], 6);
-				etoile2 = tab.getValueAt(rows[i], 7);
-				fenetre2.setBoule1(boule1);
-				fenetre2.setBoule2(boule2);
-				fenetre2.setBoule3(boule3);
-				fenetre2.setBoule4(boule4);
-				fenetre2.setBoule5(boule5);
-				fenetre2.setEtoile1(etoile1);
-				fenetre2.setEtoile2(etoile2);
-				
+				fenetre2 = new Dessin(boule1, boule2, boule3, boule4, boule5, etoile1, etoile2);
+				fenetre2.setVisible(true);
 
 			}
-			//fenetre2.drawPanel(); 
+			// fenetre2.drawPanel();
 		}
 	}
 }
