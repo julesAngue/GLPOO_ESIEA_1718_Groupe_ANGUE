@@ -72,7 +72,7 @@ public class TirageJFrame extends JFrame {
 	 */
 
 	public Object boule1;
-	//public Object values;
+	public Object values;
 
 	public class Dessiner extends AbstractAction {
 
@@ -87,13 +87,13 @@ public class TirageJFrame extends JFrame {
 			for (int i = 0; i < rows.length; i++) {
 				log.debug(rows[i]);
 				boule1 = tab.getValueAt(rows[i], 1);
-				log.debug(boule1);
+				//log.debug(boule1);
 			
-				//for (int j = 0; j < modele.getColumnCount(); j++) {
-					// log.debug(tab.getValueAt(rows[i], j ));
-				//	values = tab.getValueAt(rows[i], j);
-					//log.debug(values)
-				//}
+				for (int j = 0; j < modele.getColumnCount(); j++) {
+				log.debug(tab.getValueAt(rows[i], j ));
+					values = tab.getValueAt(rows[i], j);
+					log.debug(values);
+				}
 			}
 		}
 	}
