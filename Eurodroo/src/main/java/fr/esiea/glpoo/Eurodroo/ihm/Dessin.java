@@ -75,7 +75,7 @@ public class Dessin extends JFrame {
 
 
 		//getContentPane().add(jPanel);//ov
-		getContentPane().add(jPanel2);//fillov
+		//getContentPane().add(jPanel2);//fillov
 		//getContentPane().add(jPanel3);//rec
 		//getContentPane().add(jPanel4);
 		//getContentPane().add(jPanel5);//tri
@@ -117,7 +117,7 @@ public class Dessin extends JFrame {
 	public void forme() {
 
 	}
-
+	
 	public JPanel etoileToForme(int boule) {
 		JPanel panel = new JPanel();
 		switch (boule) {
