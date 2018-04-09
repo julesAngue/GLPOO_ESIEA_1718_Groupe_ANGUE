@@ -1,14 +1,31 @@
 package fr.esiea.glpoo.Eurodroo.ihm;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class Oval extends JPanel {
 
-	public void paintComponent(Graphics g) {
-		int x1 = this.getWidth() / 4;
-		int y1 = this.getHeight() / 4;
-		g.drawOval(x1, y1, this.getWidth() / 2, this.getHeight() / 2);
+	public void paint(Graphics g) {
+		  super.paint(g);  
+		  
+		  Color c = g.getColor();
+			g.setColor(Color.RED);
+		  //g.setColor(new Color(255,192,0));
+			int x = 20;
+			int y = 20;
+			int width = 75;
+			int height = 75;
+			
+			g.setFont(new Font("Arial",Font.BOLD,14));  
+			  
+			 //Draw String in JPanel
+			 //g.setColor(Color.BLACK);  
+			 g.drawString("23",20,20); 
+	   g.drawOval(x, y, width, height);
+	   
+	   g.setColor(c);
 	}
 
 

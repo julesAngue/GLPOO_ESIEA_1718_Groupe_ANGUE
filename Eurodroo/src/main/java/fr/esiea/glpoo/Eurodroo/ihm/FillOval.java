@@ -22,7 +22,7 @@ public class FillOval extends JPanel {
 			g.setFont(new Font("Arial",Font.BOLD,14));  
 			  
 			 //Draw String in JPanel
-			// g.setColor(new Color(1,1,1));  
+			 //g.setColor(Color.BLACK);  
 			 g.drawString("23",20,20); 
 	   g.fillOval(x, y, width, height);
 	   
