@@ -24,7 +24,7 @@ import fr.esiea.glpoo.Eurodroo.ihm.TirageModel;
 import org.apache.log4j.Logger;
 
 public class TirageJFrame extends JFrame {
-	private final Oval fenetre2;
+	private final Dessin fenetre2;
 	private final static Logger log = Logger.getLogger(TirageJFrame.class);
 	private final TirageModel modele = new TirageModel();
 	final JTable tab = new JTable(modele);
@@ -50,7 +50,7 @@ public class TirageJFrame extends JFrame {
 		getContentPane().add(boutons, SOUTH);
 
 		pack();
-		this.fenetre2 = new Oval();
+		this.fenetre2 = new Dessin();
 	    fenetre2.setVisible(true);
 		
 	}

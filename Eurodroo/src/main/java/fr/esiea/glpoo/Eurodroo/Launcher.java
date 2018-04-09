@@ -5,7 +5,7 @@ import fr.esiea.glpoo.Eurodroo.dao.CsvTirageDao;
 import fr.esiea.glpoo.Eurodroo.dao.TirageDao;
 import fr.esiea.glpoo.Eurodroo.domaine.dessinTirage;
 import fr.esiea.glpoo.Eurodroo.ihm.TirageJFrame;
-import fr.esiea.glpoo.Eurodroo.ihm.Oval;
+import fr.esiea.glpoo.Eurodroo.ihm.Dessin;
 
 public class Launcher 
 {
