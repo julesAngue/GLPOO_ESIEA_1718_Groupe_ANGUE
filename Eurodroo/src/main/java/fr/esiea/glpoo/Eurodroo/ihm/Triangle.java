@@ -29,33 +29,47 @@ public class Triangle extends JPanel {
 	 
 	 Color c = g.getColor();
 		
-		g.setColor(Color.RED);
+	  if( etoile2%3 == 0 ) {
+			g.setColor(Color.RED);
+		  }
+		  if(etoile2%3 == 1){
+			g.setColor(Color.GREEN);}
+			
+		  if (etoile2%3 == 2){
+				g.setColor(Color.BLUE);}
 
 	  
 	 //All triangle corner x coordinate  
-	 int[]x={0,150,300};  
+		  int[]x={(boule1 * (0+boule1)) % (640 - boule3),(boule1 * (150+boule1)) % (640 - boule3),(boule1 * (300+boule1)) % (640 - boule3)};   
 	  
 	 //All triangle corner y coordinate  
-	 int[]y={200,0,200};  
+		  int[]y={(boule2 * (0+boule2)) % (640 - boule4),(boule2 * (150+boule2)) % (640 - boule4),(boule2 * (300+boule2)) % (640 - boule4)};  
+		  
 	  
-	 
-	 g.setColor(new Color(255,192,0));  
+	
 	  
 	 //Draw triangle in JPanel  
-	 g.drawPolygon(x,y,3);  
+	 g.fillPolygon(x,y,3);  
 	  
-	 
-	g.setColor(new Color(1,1,1));  
+	  
+	 String boule = String.valueOf(boule5);
 	  
 	 //Set font that will use when draw String  
 	 g.setFont(new Font("Arial",Font.BOLD,14));  
 	  
 	 //Draw String in JPanel  
-	 g.drawString("(0,200)",10,200);  
-	 g.drawString("(150,0)",150,20);  
-	 g.drawString("(300,200)",290,200);  
-	 
+	 g.drawString(boule,10,200);  
+
 	 g.setColor(c);
+			
+		
+			
+			
+
+			
+		
+	   
+	   
 	}  
 
 }
