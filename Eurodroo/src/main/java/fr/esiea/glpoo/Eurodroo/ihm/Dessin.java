@@ -73,9 +73,18 @@ public class Dessin extends JFrame {
 
 		getContentPane().setLayout(new GridLayout(1, 2));
 
+
 		// getContentPane().add(jPanel);
 		// getContentPane().add(jPanel2);
-		getContentPane().add(jPanel3);
+		//getContentPane().add(jPanel3);
+
+		//getContentPane().add(jPanel);//ov
+		//getContentPane().add(jPanel2);//fillov
+		//getContentPane().add(jPanel3);//rec
+		//getContentPane().add(jPanel4);
+		//getContentPane().add(jPanel5);//tri
+		//getContentPane().add(jPanel6);
+
 
 		setSize(640, 480);
 		setVisible(true);
