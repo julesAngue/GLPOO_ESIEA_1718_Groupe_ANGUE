@@ -76,18 +76,12 @@ public class TirageModel extends AbstractTableModel {
 		// TODO Auto-generated method stub
 		return entetes[column];
 	}
-	public void addDessin(final dessinTirage dessin) {
+	
+	public void Dessin(final dessinTirage dessin) {
 		
 		Log.debug("ajouterDessin");
-		dessins.add(dessin);
-		final int position = dessins.size() - 1;
-		fireTableRowsInserted(position, position);
 	}
-	public void delete(final int position){
-	Log.debug("supprimerDessin");
-	dessins.remove(position);
-	fireTableRowsDeleted(position, position);
-}
+
 
 	
 	

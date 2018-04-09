@@ -12,6 +12,7 @@ public class Launcher
 	private final static Logger log = Logger.getLogger(Launcher.class);
     public static void main( String[] args )
     {
+    	log.debug("launch");
       
     	final TirageJFrame fenetre = new TirageJFrame();
 		fenetre.setVisible(true);

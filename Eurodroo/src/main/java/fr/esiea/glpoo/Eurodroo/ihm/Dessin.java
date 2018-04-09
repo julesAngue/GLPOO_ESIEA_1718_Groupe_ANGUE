@@ -1,5 +1,7 @@
 package fr.esiea.glpoo.Eurodroo.ihm;
 
+import fr.esiea.glpoo.Eurodroo.ihm.TirageJFrame;
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Graphics;
@@ -13,7 +15,7 @@ import org.apache.log4j.Logger;
 
 public class Dessin extends JFrame {
 	
-	private int boule1;
+	//private int boule1 = getValues().values[1];
 	private int boule2;
 	private int boule3;
 	private int boule4;
@@ -39,10 +41,9 @@ public class Dessin extends JFrame {
 		//this.setContentPane(new Forme());
 		//this.setContentPane(new testdessin());
 		
-	/*	if(boule1 = )
-		switch(bouleXIndex) {
+		
+		/*switch(bouleXIndex) {
 		case 0 :
-			Component jPanel;
 			return getContentPane().add(jPanel);
 		}*/
 		
@@ -70,7 +71,15 @@ public class Dessin extends JFrame {
 
 	
 	
-	
+
+
+
+
+
+
+
+
+
 	public void abscisse() {	
 		
 	}
