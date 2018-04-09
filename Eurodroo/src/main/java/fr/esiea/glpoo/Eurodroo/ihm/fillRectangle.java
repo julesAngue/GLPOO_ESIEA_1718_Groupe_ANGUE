@@ -42,8 +42,8 @@ public class fillRectangle extends JPanel{
 		
 			
 		 
-			int x = (boule1 * (100+boule1)) % (640 - boule3);
-			int y = (boule2 * (100+boule2)) % (480 - boule4);
+			int x = boule1;
+			int y = boule2;
 			
 			int width = (boule1 * (100+boule1)) % (320 - boule3);
 			int height = (boule2 * (100+boule2)) % (240 - boule4);
