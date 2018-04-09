@@ -28,22 +28,41 @@ public class fillRectangle extends JPanel{
 		
 		Color c = g.getColor();
 		
-		g.setColor(Color.RED);
-		
-		int x = 10;
-		int y = 10;
-		int width = 80;
-		int height = 80;
-		
-		g.fillRect(x,y,width,height);
-		
-		g.setFont(new Font("Arial",Font.BOLD,14));  
+		 
 		  
-		 //Draw String in JPanel
-		 //g.setColor(Color.BLACK);  
-		 g.drawString("23",20,20); 
-	
-		g.setColor(c);
+		  if( etoile2%3 == 0 ) {
+			g.setColor(Color.RED);
+		  }
+		  if(etoile2%3 == 1){
+			g.setColor(Color.GREEN);}
+			
+		  if (etoile2%3 == 2){
+				g.setColor(Color.BLUE);}
+			
+		
+			
+		 
+			int x = (boule1 * (100+boule1)) % (640 - boule3);
+			int y = (boule2 * (100+boule2)) % (480 - boule4);
+			
+			int width = (boule1 * (100+boule1)) % (320 - boule3);
+			int height = (boule2 * (100+boule2)) % (240 - boule4);
+		
+			
+			g.setFont(new Font("Arial",Font.BOLD,14));  
+			  
+			 //Draw String in JPanel
+			 
+			String boule = String.valueOf(boule5);
+		
+			 g.drawString(boule, x , y); 
+			 g.fillRect(x,y,width,height);
+	   
+	   g.setColor(c);
+		
+		
+		
+		
 	}
 
 }
