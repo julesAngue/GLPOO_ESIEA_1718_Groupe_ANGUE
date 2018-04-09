@@ -7,14 +7,16 @@ import javax.swing.JPanel;
 
 public class FillOval extends JPanel {
 
-	  public void paint(Graphics g){ 
+	  public void paint(Graphics g,int boule1){ 
 		  
 		  super.paint(g);  
 		  
 		  Color c = g.getColor();
 			g.setColor(Color.RED);
+			
 		  //g.setColor(new Color(255,192,0));
-			int x = 20;
+			
+			int x = boule1;
 			int y = 20;
 			int width = 75;
 			int height = 75;

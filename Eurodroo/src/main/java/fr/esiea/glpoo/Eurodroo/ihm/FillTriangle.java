@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class FillTriangle extends JPanel {
 	
-	public void paintComponent(Graphics g)  
+	public void paint(Graphics g)  
 	{  
 	 super.paint(g);  
 	 
@@ -23,13 +23,13 @@ public class FillTriangle extends JPanel {
 	 int[]y={200,0,200};  
 	  
 	
-	 g.setColor(new Color(255,192,0));  
+	// g.setColor(new Color(255,192,0));  
 	  
 	 //Draw triangle in JPanel  
 	 g.fillPolygon(x,y,3);  
 	  
 	  
-	 g.setColor(new Color(1,1,1));  
+	// g.setColor(new Color(1,1,1));  
 	  
 	 //Set font that will use when draw String  
 	 g.setFont(new Font("Arial",Font.BOLD,14));  

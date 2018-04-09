@@ -56,7 +56,7 @@ public class Dessin extends JFrame {
 		 * switch(bouleXIndex) { case 0 : return getContentPane().add(jPanel); }
 		 */
 
-		this.jPanel = etoileToForme(etoile1);
+		this.jPanel = etoileToForme(etoile1,boule1,boule2,boule3,boule4,boule5,etoile2);
 
 
 		// jPanel.setBackground(Color.GREEN);
@@ -75,44 +75,13 @@ public class Dessin extends JFrame {
 
 	}
 
-	public void abscisse() {
-
-	}
-
-	public void ordonnée() {
-
-	}
-
-	public void hauteur() {
-
-	}
-
-	public void largeur() {
-
-	}
-
-	public void plein() {
-
-	}
-
-	public void rotation() {
-
-	}
-
-	public void couleur(Graphics g) {
-
-	}
-
-	public void forme() {
-
-	}
 	
-	public JPanel etoileToForme(int boule) {
+	public JPanel etoileToForme(int etoile1,int boule1,int boule2,int boule3,int boule4,int boule5,int etoile2) {
 		JPanel panel = new JPanel();
-		switch (boule) {
+		switch (etoile1) {
 		case 1:
 		case 2:
-			panel = new Oval();
+			panel = new Oval(boule1,boule2,boule3,boule4,boule5,etoile2);
 			break;
 		case 3:
 		case 4:

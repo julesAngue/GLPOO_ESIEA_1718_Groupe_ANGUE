@@ -6,6 +6,23 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class Oval extends JPanel {
+	
+	private int boule1;
+	private int boule2;
+	private int boule3;
+	private int boule4;
+	private int boule5;
+	private int etoile2;
+	
+
+	public Oval(int boule1, int boule2, int boule3, int boule4, int boule5, int etoile2) {
+		this.boule1 = boule1;
+		this.boule2 = boule2;
+		this.boule3 = boule3;
+		this.boule4 = boule4;
+		this.boule5 = boule5;
+		this.etoile2 = etoile2;
+	}
 
 	public void paint(Graphics g) {
 		  super.paint(g);  
