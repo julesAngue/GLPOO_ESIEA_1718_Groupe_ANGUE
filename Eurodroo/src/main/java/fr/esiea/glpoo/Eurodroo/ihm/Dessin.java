@@ -85,23 +85,23 @@ public class Dessin extends JFrame {
 			break;
 		case 3:
 		case 4:
-			panel = new FillOval();
+			panel = new FillOval(boule1,boule2,boule3,boule4,boule5,etoile2);
 			break;
 		case 5:
 		case 6:
-			panel = new Rectangle();
+			panel = new Rectangle(boule1,boule2,boule3,boule4,boule5,etoile2);
 			break;
 		case 7:
 		case 8:
-			panel = new fillRectangle();
+			panel = new fillRectangle(boule1,boule2,boule3,boule4,boule5,etoile2);
 			break;
 		case 9:
 		case 10:
-			panel = new Triangle();
+			panel = new Triangle(boule1,boule2,boule3,boule4,boule5,etoile2);
 			break;
 		case 11:
 		case 12:
-			panel = new FillTriangle();
+			panel = new FillTriangle(boule1,boule2,boule3,boule4,boule5,etoile2);
 			break;
 		}
 		return panel;
