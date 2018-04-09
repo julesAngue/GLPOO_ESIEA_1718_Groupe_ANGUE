@@ -1,5 +1,5 @@
 package fr.esiea.glpoo.Eurodroo.ihm;
-
+import static java.awt.BorderLayout.SOUTH;
 
 
 import java.awt.BorderLayout;
@@ -36,46 +36,24 @@ public class TirageJFrame extends JFrame {
 		final JScrollPane scroll = new JScrollPane(tab);
 		getContentPane().add(scroll, BorderLayout.CENTER);
 		
-		final JPanel barreBouton = new JPanel();
-		barreBouton.setBackground(Color.GREEN);
-		final JButton boutonAddDessin = new JButton("Ajouter");
-		barreBouton.add(boutonAddDessin);
-		final JButton boutonDeleteDessin = new JButton("Supprimer");
-		barreBouton.add(boutonDeleteDessin);
-		getContentPane().add(barreBouton, BorderLayout.SOUTH);
+		final JPanel boutons = new JPanel();
+        boutons.add(new JButton(new Dessiner()));
+        getContentPane().add(boutons, SOUTH);
+        
 		pack();
 	}
 
-	private class AjouterAction extends AbstractAction {
 
-		public AjouterAction() {
-			super("Ajout Dessin");
-		}
+	private class Dessiner extends AbstractAction {
 
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			log.debug("ici actionPerformed");
-			final SimpleDessinTirage dessin = new SimpleDessinTirage(33, 12,3,1,4,4,5,6,6);
-			modele.addDessin(dessin);
-		}
-	}
+        private Dessiner() {
+            super("Dessiner");
+        }
 
-	private class SupprimerAction extends AbstractAction {
-
-		public SupprimerAction() {
-			super("Supprimer Dessin");
-		}
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			log.debug("ici actionPerformed");
-			final int[] rows = tab.getSelectedRows();
-			for (int i = rows.length - 1; 0 <= i; i--) {
-				modele.delete(rows[i]);
-			}
-		}
-
-	}
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            log.debug("Click sur le bouton ajouter");
+        }
+    }
+	
 }
