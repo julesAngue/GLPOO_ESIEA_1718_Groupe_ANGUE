@@ -15,7 +15,8 @@ import org.apache.log4j.Logger;
 
 public class Dessin extends JFrame {
 	
-	//private int boule1 = getValues().values[1];
+	
+	private int boule1;
 	private int boule2;
 	private int boule3;
 	private int boule4;
@@ -41,6 +42,7 @@ public class Dessin extends JFrame {
 		//this.setContentPane(new Forme());
 		//this.setContentPane(new testdessin());
 		
+
 		
 		/*switch(bouleXIndex) {
 		case 0 :

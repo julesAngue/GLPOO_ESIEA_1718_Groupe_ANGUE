@@ -77,9 +77,10 @@ public class TirageModel extends AbstractTableModel {
 		return entetes[column];
 	}
 	
-	public void Dessin(final dessinTirage dessin) {
+	public void values(final dessinTirage dessins) {
 		
 		Log.debug("ajouterDessin");
+		
 	}
 
 
