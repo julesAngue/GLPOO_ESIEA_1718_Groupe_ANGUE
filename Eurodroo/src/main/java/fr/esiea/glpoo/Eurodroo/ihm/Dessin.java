@@ -85,7 +85,7 @@ public class Dessin extends JFrame {
 			break;
 		case 3:
 		case 4:
-			panel = new FillOval();
+			panel = new FillOval(boule1,boule2,boule3,boule4,boule5,etoile2);
 			break;
 		case 5:
 		case 6:

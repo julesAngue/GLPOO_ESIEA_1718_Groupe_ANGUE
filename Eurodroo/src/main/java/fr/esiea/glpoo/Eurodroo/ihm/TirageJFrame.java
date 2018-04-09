@@ -108,7 +108,7 @@ public class TirageJFrame extends JFrame {
 				fenetre2.setVisible(true);
 
 			}
-			fenetre2.etoileToForme(etoile1);
+			fenetre2.etoileToForme(etoile1,boule1, boule2, boule3, boule4, boule5, etoile2);
 		}
 	}
 }
