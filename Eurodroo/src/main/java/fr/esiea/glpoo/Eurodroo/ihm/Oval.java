@@ -24,28 +24,46 @@ public class Oval extends JPanel {
 		this.etoile2 = etoile2;
 	}
 
+
 	public void paint(Graphics g) {
 		  super.paint(g);  
 		  
 		  Color c = g.getColor();
+		
+		 
+		  
+		  if( etoile2%3 == 0 ) {
 			g.setColor(Color.RED);
-		  //g.setColor(new Color(255,192,0));
-			int x = 20;
-			int y = 20;
-			int width = 75;
-			int height = 75;
+		  }
+		  if(etoile2%3 == 1){
+			g.setColor(Color.GREEN);}
+			
+		  if (etoile2%3 == 2){
+				g.setColor(Color.BLUE);}
+			
+		
+			
+		 
+			int x = (boule1 * (100+boule1)) % (640 - boule3);
+			int y = (boule2 * (100+boule2)) % (480 - boule4);
+			
+			int width = (boule1 * (100+boule1)) % (320 - boule3);
+			int height = (boule2 * (100+boule2)) % (240 - boule4);
+		
 			
 			g.setFont(new Font("Arial",Font.BOLD,14));  
 			  
 			 //Draw String in JPanel
-			 //g.setColor(Color.BLACK);  
-			 g.drawString("23",20,20); 
-	   g.drawOval(x, y, width, height);
+			 
+			String boule = String.valueOf(boule5);
+		
+			 g.drawString(boule, x , y); 
+			 g.drawOval(x, y, width, height);
 	   
 	   g.setColor(c);
 	}
 
-
+	
 	
 	
 }

@@ -27,25 +27,40 @@ public class FillOval extends JPanel {
 	}
 
 
-	  public void paint(Graphics g,int boule1){ 
+	  public void paint(Graphics g) { 
 		  
 		  super.paint(g);  
 		  
 		  Color c = g.getColor();
+		  
+		 
+		  
+		  if( etoile2%3 == 0 ) {
 			g.setColor(Color.RED);
+		  }
+		  if(etoile2%3 == 1){
+			g.setColor(Color.GREEN);}
 			
-		  //g.setColor(new Color(255,192,0));
+		  if (etoile2%3 == 2){
+				g.setColor(Color.BLUE);}
 			
-			int x = boule1;
-			int y = 20;
-			int width = 75;
-			int height = 75;
+		
+			
+		 
+			int x = (boule1 * (100+boule1)) % (640 - boule3);
+			int y = (boule2 * (100+boule2)) % (480 - boule4);
+			
+			int width = (boule1 * (100+boule1)) % (320 - boule3);
+			int height = (boule2 * (100+boule2)) % (240 - boule4);
+		
 			
 			g.setFont(new Font("Arial",Font.BOLD,14));  
 			  
 			 //Draw String in JPanel
-			 //g.setColor(Color.BLACK);  
-			 g.drawString("23",20,20); 
+			 
+			String boule = String.valueOf(boule5);
+		
+			 g.drawString(boule, x , y); 
 	   g.fillOval(x, y, width, height);
 	   
 	   g.setColor(c);
