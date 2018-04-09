@@ -6,6 +6,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
@@ -27,6 +29,7 @@ public class TirageJFrame extends JFrame {
 	private Dessin fenetre2;
 	private final static Logger log = Logger.getLogger(TirageJFrame.class);
 	private final TirageModel modele = new TirageModel();
+	private List<JPanel> listFormes;
 	final JTable tab = new JTable(modele);
 
 	public TirageJFrame() {
@@ -50,7 +53,9 @@ public class TirageJFrame extends JFrame {
 		getContentPane().add(boutons, SOUTH);
 
 		pack();
-		fenetre2 = new Dessin(0,0,0,0,0,0,0);
+		this.listFormes = new ArrayList<JPanel>();
+		listFormes.add(new JPanel());
+		fenetre2 = new Dessin(listFormes);
 		fenetre2.setVisible(true);
 	}
 
@@ -92,10 +97,11 @@ public class TirageJFrame extends JFrame {
 			log.debug("Click sur le bouton ajouter");
 			fenetre2.setVisible(false);
 			fenetre2.dispose();
+			listFormes.clear();
 
 			final int[] rows = tab.getSelectedRows();
+			
 			for (int i = 0; i < rows.length; i++) {
-				log.debug(rows[i]);
 				boule1 = (int) tab.getValueAt(rows[i], 1);
 				boule2 = (int) tab.getValueAt(rows[i], 2);
 				boule3 = (int) tab.getValueAt(rows[i], 3);
@@ -103,12 +109,49 @@ public class TirageJFrame extends JFrame {
 				boule5 = (int) tab.getValueAt(rows[i], 5);
 				etoile1 = (int) tab.getValueAt(rows[i], 6);
 				etoile2 = (int) tab.getValueAt(rows[i], 7);
-
-				fenetre2 = new Dessin(boule1, boule2, boule3, boule4, boule5, etoile1, etoile2);
-				fenetre2.setVisible(true);
-
+				ajoutFormes(etoile1, boule1, boule2, boule3, boule4, boule5, etoile2);
+				log.debug(rows[i]);
 			}
-			fenetre2.etoileToForme(etoile1,boule1, boule2, boule3, boule4, boule5, etoile2);
+			fenetre2 = new Dessin(listFormes);
+			fenetre2.setVisible(true);
+		}
+
+		public JPanel etoileToForme(int etoile1, int boule1, int boule2, int boule3, int boule4, int boule5,
+				int etoile2) {
+			JPanel panel = new JPanel();
+			log.debug("dans etoileToformes");
+			switch (etoile1) {
+			case 1:
+			case 2:
+				panel = new Oval(boule1, boule2, boule3, boule4, boule5, etoile2);
+				break;
+			case 3:
+			case 4:
+				panel = new FillOval(boule1, boule2, boule3, boule4, boule5, etoile2);
+				break;
+			case 5:
+			case 6:
+				panel = new Rectangle(boule1, boule2, boule3, boule4, boule5, etoile2);
+				break;
+			case 7:
+			case 8:
+				panel = new fillRectangle(boule1, boule2, boule3, boule4, boule5, etoile2);
+				break;
+			case 9:
+			case 10:
+				panel = new Triangle(boule1, boule2, boule3, boule4, boule5, etoile2);
+				break;
+			case 11:
+			case 12:
+				panel = new FillTriangle(boule1, boule2, boule3, boule4, boule5, etoile2);
+				break;
+			}
+			return panel;
+		}
+
+		public void ajoutFormes(int etoile1, int boule1, int boule2, int boule3, int boule4, int boule5, int etoile2) {
+			log.debug("dans ajout formes");
+			listFormes.add(etoileToForme(etoile1, boule1, boule2, boule3, boule4, boule5, etoile2));
 		}
 	}
 }
