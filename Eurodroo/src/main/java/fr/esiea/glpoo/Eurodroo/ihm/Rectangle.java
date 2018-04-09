@@ -11,6 +11,7 @@ public class Rectangle extends JPanel {
 		int y = 10;
 		int width = 80;
 		int height = 80;
+		
 		g.drawRect(x, y, width, height);
 	
 	}
