@@ -70,7 +70,7 @@ public class Dessin extends JFrame {
 		getContentPane().add(jPanel);
 
 
-		setSize(640, 480);
+		setSize(800, 680);
 		setVisible(true);
 
 	}
