@@ -33,6 +33,7 @@ public class FillOval extends JPanel {
 		  
 		  Color c = g.getColor();
 		  
+		  setBackground(Color.WHITE);
 		 
 		  
 		  if( etoile2%3 == 0 ) {
@@ -47,11 +48,11 @@ public class FillOval extends JPanel {
 		
 			
 		 
-			int x = (boule1 * (100+boule1)) % (640 - boule3);
-			int y = (boule2 * (100+boule2)) % (480 - boule4);
+			int x = boule3;
+			int y = boule2;
 			
-			int width = (boule1 * (100+boule1)) % (320 - boule3);
-			int height = (boule2 * (100+boule2)) % (240 - boule4);
+			int width = boule1 ;
+			int height = boule2;
 		
 			
 			g.setFont(new Font("Arial",Font.BOLD,14));  

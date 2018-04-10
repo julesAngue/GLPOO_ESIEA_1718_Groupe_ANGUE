@@ -31,24 +31,24 @@ public class TirageModel extends AbstractTableModel {
 	
 	@Override
 	public int getColumnCount() {
-		// TODO Auto-generated method stub
+	
 		
-		//return data.length;
+	
 		return entetes.length;
 	}
 	
 	@Override
 	public int getRowCount() {
-		// TODO Auto-generated method stub
+		
 		return dessins.size();
 	}
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
-		// TODO Auto-generated method stub
+		
 		
 		final dessinTirage dessin = dessins.get(rowIndex);
-		//return data[rowIndex][columnIndex];
+		
 		switch(columnIndex) {
 		case 0 :
 			return dessin.getNbTirage();
@@ -73,7 +73,7 @@ public class TirageModel extends AbstractTableModel {
 	}
 	@Override
 	public String getColumnName(int column) {
-		// TODO Auto-generated method stub
+		
 		return entetes[column];
 	}
 	

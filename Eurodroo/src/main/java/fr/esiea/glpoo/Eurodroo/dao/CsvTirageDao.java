@@ -23,19 +23,16 @@ public class CsvTirageDao implements TirageDao {
 	public List<dessinTirage> Tirage() {
 		final List<dessinTirage> dessins = new ArrayList<>();
 
-		//boolean first = false;
+		
 
-		// fichier > ligne
+		
 		final List<String> lignes = lecture();
-		// ligne > dessin
+		
 		for (final String ligne : lignes) {
 			if (ligne.trim().isEmpty() || ligne.startsWith("#")) {
 				continue;
 			}
-		/*	if (first) {
-				first = false;
-				continue;
-			}*/
+
 			final dessinTirage dessin = transform(ligne);
 			dessins.add(dessin);
 		}
@@ -45,7 +42,7 @@ public class CsvTirageDao implements TirageDao {
 	private dessinTirage transform(final String ligne) {
 		final SimpleDessinTirage dessin = new SimpleDessinTirage();
 		
-		//remplir les champs a partir de la ligne
+		
 
 		  
 		  final String separator = ";"; 

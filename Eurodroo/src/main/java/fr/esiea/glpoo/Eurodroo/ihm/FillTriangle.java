@@ -28,6 +28,8 @@ public class FillTriangle extends JPanel {
 	 super.paint(g);  
 	 
 	 Color c = g.getColor();
+	 
+	 setBackground(Color.WHITE);
 		
 	  if( etoile2%3 == 0 ) {
 			g.setColor(Color.RED);
